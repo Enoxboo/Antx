@@ -19,3 +19,5 @@ const GRID_CELL_SIZE := 16
 # -- ANT --
 const ANT_SPEED_WORKER  := 60.0
 const ANT_SPEED_SOLDIER := 45.0
+const ANT_RANDOM_WEIGHT  := 15.0  # higher = more exploration, less pheromone following
+const PHEROMONE_EMIT_AMOUNT := 10.0
