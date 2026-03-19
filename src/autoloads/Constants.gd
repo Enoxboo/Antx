@@ -3,6 +3,10 @@ class_name Constants
 ## Central repository for all tunable gameplay values.
 ## No magic numbers anywhere else in the codebase — everything lives here.
 
+# -- World --
+const WORLD_WIDTH  := 1920
+const WORLD_HEIGHT := 1080
+
 # -- PHEROMONES --
 const PHEROMONE_EVAPORATION_RATE := 0.01
 const PHEROMONE_DIFFUSION_RATE    := 0.05
