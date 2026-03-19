@@ -1,5 +1,5 @@
 class_name PheromoneGrid
-extends Node
+extends Node2D
 
 enum Type { HOME, FOOD, DANGER }
 
@@ -19,6 +19,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	evaporate(delta)
+	# queue_redraw()  # uncomment to enable pheromone debug view
 
 func read(type: Type, cell: Vector2i) -> float:
 	if not _in_bounds(cell):
@@ -50,3 +51,26 @@ func _in_bounds(cell: Vector2i) -> bool:
 
 func _index(cell: Vector2i) -> int:
 	return cell.y * _width + cell.x
+
+#func _draw() -> void:
+	#for y in _height:
+		#for x in _width:
+			#var cell := Vector2i(x, y)
+			#var home  := read(Type.HOME,  cell)
+			#var food  := read(Type.FOOD,  cell)
+			#var danger := read(Type.DANGER, cell)
+#
+			#if home < 0.5 and food < 0.5 and danger < 0.5:
+				#continue
+#
+			#var color := Color(
+				#food   / Constants.PHEROMONE_MAX_STRENGTH,
+				#home   / Constants.PHEROMONE_MAX_STRENGTH,
+				#danger / Constants.PHEROMONE_MAX_STRENGTH,
+				#0.6
+			#)
+			#draw_rect(
+				#Rect2(x * Constants.GRID_CELL_SIZE, y * Constants.GRID_CELL_SIZE,
+					  #Constants.GRID_CELL_SIZE, Constants.GRID_CELL_SIZE),
+				#color
+			#)
