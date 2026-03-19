@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://3qxu4qxc7b0o"]
+
+[ext_resource type="Script" uid="uid://c6q7y56u0ycdx" path="res://src/entities/FoodSource.gd" id="1_4lj57"]
+[ext_resource type="Texture2D" uid="uid://dniwsp02rapvn" path="res://icon.svg" id="2_t7d57"]
+
+[node name="FoodSource" type="Node2D" unique_id=1210853886]
+script = ExtResource("1_4lj57")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=744484330]
+scale = Vector2(0.09374999, 0.09374999)
+texture = ExtResource("2_t7d57")
