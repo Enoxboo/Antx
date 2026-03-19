@@ -1,0 +1,13 @@
+# antx/.gitignore
+
+# Godot-generated — fully regenerated on project open
+.godot/
+*.translation
+*.import
+
+# Export presets (contain machine-specific paths)
+export_presets.cfg
+
+# OS artifacts
+.DS_Store
+Thumbs.db
