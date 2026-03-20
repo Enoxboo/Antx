@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cio54ppmsbowc"]
+
+[ext_resource type="Script" uid="uid://covkeymin558c" path="res://src/entities/ant/AntBase.gd" id="1_dceor"]
+[ext_resource type="Texture2D" uid="uid://dniwsp02rapvn" path="res://icon.svg" id="2_0ciql"]
+
+[node name="AntBase" type="Node2D" unique_id=857853730]
+script = ExtResource("1_dceor")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=315666428]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_0ciql")
