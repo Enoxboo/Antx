@@ -1,19 +1,15 @@
-[gd_scene format=3 uid="uid://bnmjiv8vv682v"]
+[gd_scene format=3 uid="uid://dadpqnv07qcc4"]
 
 [ext_resource type="Script" uid="uid://bdejydv3ulem2" path="res://src/world/Main.gd" id="1_6744j"]
+[ext_resource type="PackedScene" uid="uid://4on56yybbqp6" path="res://src/entities/anthill/Anthill.tscn" id="2_sh1f0"]
 [ext_resource type="Script" uid="uid://bivdffctuwv7u" path="res://src/systems/pheromones/PheromoneGrid.gd" id="2_wjyfs"]
-[ext_resource type="Texture2D" uid="uid://dniwsp02rapvn" path="res://icon.svg" id="3_sh1f0"]
 
 [node name="Main" type="Node2D" unique_id=1009225362]
 script = ExtResource("1_6744j")
 
+[node name="Anthill" parent="." unique_id=800296969 instance=ExtResource("2_sh1f0")]
+position = Vector2(960, 540)
+
 [node name="PheromoneGrid" type="Node2D" parent="." unique_id=590709992]
 script = ExtResource("2_wjyfs")
 metadata/_custom_type_script = "uid://bivdffctuwv7u"
-
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1943858517]
-position = Vector2(960, 540)
-color = Color(0, 1, 1, 1)
-
-[node name="Sprite2D" type="Sprite2D" parent="Polygon2D" unique_id=740972186]
-texture = ExtResource("3_sh1f0")

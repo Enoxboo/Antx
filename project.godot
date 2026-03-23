@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Antx"
-run/main_scene="uid://bnmjiv8vv682v"
+run/main_scene="uid://dadpqnv07qcc4"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

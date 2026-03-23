@@ -26,3 +26,9 @@ const FOOD_DETECT_RADIUS  := 8
 
 # -- FOOD --
 const FOOD_INITIAL_QUANTITY := 100.0
+
+# -- ANTHILL --
+const ANTHILL_HP_MAX          := 100.0
+const ANTHILL_SPAWN_INTERVAL  := 3.0
+const ANTHILL_SPAWN_FOOD_COST := 5.0
+const ANTHILL_SPAWN_RADIUS    := 30.0

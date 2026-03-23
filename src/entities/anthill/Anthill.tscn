@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://4on56yybbqp6"]
+
+[ext_resource type="Script" uid="uid://deaf1shahnemt" path="res://src/entities/anthill/Anthill.gd" id="1_05n5v"]
+[ext_resource type="Texture2D" uid="uid://dniwsp02rapvn" path="res://icon.svg" id="2_v0mx3"]
+
+[node name="Anthill" type="Node2D" unique_id=800296969 node_paths=PackedStringArray("spawn_timer")]
+script = ExtResource("1_05n5v")
+spawn_timer = NodePath("Timer")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1007813431]
+visible = false
+texture = ExtResource("2_v0mx3")
+
+[node name="Timer" type="Timer" parent="." unique_id=2117108186]
+wait_time = 3.0
+autostart = true

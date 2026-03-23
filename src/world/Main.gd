@@ -1,13 +1,12 @@
 class_name Main
 extends Node2D
 
-const AntScene  := preload("uid://cio54ppmsbowc")
 const FoodScene := preload("uid://3qxu4qxc7b0o")
 
 @onready var _pheromone_grid: PheromoneGrid = $PheromoneGrid
+@onready var _anthill:        Anthill       = $Anthill
 
 var _food_sources: Array[FoodSource] = []
-var _home_pos:     Vector2           = Vector2(960, 540)
 
 func _ready() -> void:
 	var food_positions := [
@@ -25,8 +24,9 @@ func _ready() -> void:
 		food.setup(_pheromone_grid)
 		_food_sources.append(food)
 
-	for i in 100:
-		var ant: AntBase = AntScene.instantiate()
-		ant.global_position = _home_pos + Vector2(randf_range(-50, 50), randf_range(-50, 50))
-		add_child(ant)
-		ant.setup(_pheromone_grid, _food_sources, _home_pos)
+	_anthill.setup(_pheromone_grid, _food_sources)
+	_anthill.defeated.connect(_on_defeat)
+	_anthill.set_spawning(true)
+
+func _on_defeat() -> void:
+	get_tree().paused = true
